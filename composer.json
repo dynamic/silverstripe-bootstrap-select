@@ -1,0 +1,22 @@
+{
+  "name": "dynamic/bootstrap-select",
+  "description": "bootstrap select field module implementing http://silviomoreto.github.io/bootstrap-select/",
+  "keywords": ["silverstripe", "dynamic", "module", "bootstrap", "bootstrap select", "forms"],
+  "license": "BSD-3-Clause",
+  "type": "silverstripe-module",
+  "require": {
+    "silverstripe/framework": "^3.2",
+    "silverstripe/cms": "^3.2",
+    "unclecheese/bootstrap-forms": "^1.1"
+  },
+  "authors": [
+    {
+      "name": "Dynamic, Inc.",
+      "email": "dev@dynamicagency.com",
+      "homepage": "http://www.dynamicagency.com"
+    }
+  ],
+  "extra": {
+    "installer-name": "bootstrap-select"
+  }
+}
