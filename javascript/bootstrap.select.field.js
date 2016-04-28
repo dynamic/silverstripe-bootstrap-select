@@ -7,7 +7,6 @@
                 $(this).each(function () {
                     if ($(this).hasClass('bs-applied')) return; // already applied
                     $(this).addClass('bs-applied').selectpicker(config);
-                    $(this).blur().focus(); // trigger show
                 })
             });
         }
