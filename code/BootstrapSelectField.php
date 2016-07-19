@@ -10,6 +10,10 @@ class BootstrapDropdownField extends DropdownField
      * @var bool
      */
     private static $require_css = true;
+    /**
+     * @var bool
+     */
+    private static $require_js = true;
 
     /**
      * @var array
@@ -25,10 +29,12 @@ class BootstrapDropdownField extends DropdownField
         $this->addExtraClass('bootstrap-select-field')
             ->setAttribute('data-bootstrapselectconfig', Convert::array2json($this->bootstrap_select_config));
 
-        Requirements::javascript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
         //allow for not including default styles
         if ($this->config()->get('require_css') == true) {
             Requirements::css(BOOTSTRAP_DROPDOWN_FIELD_THIRDPARTY . 'bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css');
+        }
+        if ($this->config()->get('require_js') == true) {
+            Requirements::javascript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
         }
         Requirements::javascript(BOOTSTRAP_DROPDOWN_FIELD_THIRDPARTY . 'bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js');
         Requirements::javascript(BOOTSTRAP_DROPDOWN_FIELD_JAVASCRIPT . 'bootstrap.select.field.js');
