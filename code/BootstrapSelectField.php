@@ -1,7 +1,15 @@
 <?php
 
+namespace Dynamic\BootstrapSelect\Field;
+
+use DropdownField;
+use Convert;
+use Requirements;
+
+
 /**
- * Class SelectboxDropdownField
+ * Class BootstrapDropdownField
+ * @package Dynamic\BootstrapSelect\Field
  */
 class BootstrapDropdownField extends DropdownField
 {
@@ -22,7 +30,7 @@ class BootstrapDropdownField extends DropdownField
 
     /**
      * @param array $properties
-     * @return HTMLText
+     * @return \HTMLText
      */
     public function Field($properties = array())
     {
